@@ -4,6 +4,7 @@ Anthropic API: https://www.anthropic.com/api
 Get an Anthropic API Key: https://console.anthropic.com/settings/keys
 
 Create a .env file in the root directory of the project with the following content: ANTHROPIC_API_KEY="YOUR_API_KEY"
+run: python install -r requirements.txt
 """
 
 import anthropic
@@ -13,7 +14,7 @@ from dotenv import load_dotenv
 from local_io import JSONHandler
 
 
-options = JSONHandler.read_options_json(r"./options.json")
+options = JSONHandler.read_options_json(r"./options.json")  # Anthropic/options.json
 load_dotenv()
 
 class AnthropicApi:
