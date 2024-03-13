@@ -44,7 +44,7 @@ class OpenAiApiConnector:
 
         if token_count > self.token_limit:
             # prompt = prompt[:4095]
-            print(f"Hey... The prompt contains more tokens than the stipulated limit ({prompt})!")
+            print(f"Hey... The prompt contains more tokens than the stipulated limit ({self.token_limit})!")
             return None
 
         messages = [
