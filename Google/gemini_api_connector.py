@@ -4,7 +4,7 @@ Gemini API: https://ai.google.dev/tutorials/python_quickstart
 Get an Google API Key: https://aistudio.google.com/app/apikey
 
 Create a .env file in the root directory of the project with the following content: GOOGLE_API_KEY="YOUR_API_KEY"
-run: python install -r requirements.txt
+run: python -m  pip install -r requirements.txt
 """
 
 import google.generativeai as genai
