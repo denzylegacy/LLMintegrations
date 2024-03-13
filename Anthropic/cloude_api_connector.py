@@ -17,8 +17,8 @@ from local_io import JSONHandler
 options = JSONHandler.read_options_json(r"./options.json")  # Anthropic/options.json
 load_dotenv()
 
-class AnthropicApi:
-    """Anthropic API implementation"""
+class CloudApiConnector:
+    """Anthropic Cloude API Implementation"""
      
     def __init__(self, model: str) -> None:
         self.model = model
@@ -30,7 +30,7 @@ class AnthropicApi:
             max_tokens_to_sample=1024,
             prompt=f"{HUMAN_PROMPT}{prompt}{AI_PROMPT}",
         )
-        print(response, "\n")
+        print(response, "\n----------\n")
         return response.completion
 
     def cloude_messages(self, content: str) -> str:
@@ -46,6 +46,6 @@ class AnthropicApi:
 
 
 if __name__ == "__main__":
-    anthropic_api = AnthropicApi(options["models"][0])
-    # print(anthropic_api.cloude_completions("Era uma vez"))
-    print(anthropic_api.cloude_messages("Oi! Qual é o teu nome?"))
+    Cloud_api_connector = CloudApiConnector(options["models"][2])
+    # print(Cloud_api_connector.cloude_completions("Era uma vez"))
+    print(Cloud_api_connector.cloude_messages("Oi! Qual é o teu nome?"))

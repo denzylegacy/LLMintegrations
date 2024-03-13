@@ -16,8 +16,8 @@ from local_io import JSONHandler
 options = JSONHandler.read_options_json(r"./options.json")  # Google/options.json
 load_dotenv()
 
-class GeminiApi:
-    """Gemini API Implementation"""
+class GeminiApiConnector:
+    """Google Gemini API Implementation"""
 
     @staticmethod
     def gemini_models() -> None:
@@ -38,6 +38,6 @@ class GeminiApi:
 
 
 if __name__ == "__main__":
-    gemini_api = GeminiApi(options["models"][0])
-    # gemini_api.gemini_models() 
-    print(gemini_api.gemini_chat(prompt="Olá!"))
+    gemini_api_connector = GeminiApiConnector(options["models"][0])
+    # gemini_api_connector.gemini_models() 
+    print(gemini_api_connector.gemini_chat(prompt="Olá!"))
