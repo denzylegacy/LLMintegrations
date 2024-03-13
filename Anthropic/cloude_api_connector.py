@@ -4,7 +4,7 @@ Anthropic API: https://www.anthropic.com/api
 Get an Anthropic API Key: https://console.anthropic.com/settings/keys
 
 Create a .env file in the root directory of the project with the following content: ANTHROPIC_API_KEY="YOUR_API_KEY"
-run: python install -r requirements.txt
+run: python -m  pip install -r requirements.txt
 """
 
 import anthropic
