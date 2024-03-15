@@ -4,7 +4,7 @@ OpenAI API: https://openai.com/blog/openai-api
 Get an OpenAI API Key: https://platform.openai.com/api-keys
 
 Create a .env file in the root directory of the project with the following content: OPENAI_API_KEY="YOUR_API_KEY"
-run: python install -r requirements.txt
+run: python -m  pip install -r requirements.txt
 """
 from typing import Union
 from openai import OpenAI
@@ -44,7 +44,7 @@ class OpenAiApiConnector:
 
         if token_count > self.token_limit:
             # prompt = prompt[:4095]
-            print(f"Hey... The prompt contains more tokens than the stipulated limit ({prompt})!")
+            print(f"Hey... The prompt contains more tokens than the stipulated limit ({self.token_limit})!")
             return None
 
         messages = [
