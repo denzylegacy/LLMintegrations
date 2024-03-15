@@ -73,7 +73,7 @@ class OpenAiApiConnector:
 
 if __name__ == "__main__":
     openai_api = OpenAiApiConnector(
-        model=options["models"][2],
+        model=options["models"][4],
         personality="O seu nome é Dark, e você é uma pessoa muito deprimida!"
     )
     print(openai_api.gpt_chat("Oi! Qual é o teu nome? E que tipo de pessoa você é?"))
