@@ -33,5 +33,4 @@ class MariTalkApiConnector:
 
 if __name__ == "__main__":
     maritalk_api_connector = MariTalkApiConnector(options["models"][0])
-    # maritalk_api_connector.MariTalk_models() 
     print(maritalk_api_connector.maritalk_chat(prompt="Quanto é 25 + 27?"))
