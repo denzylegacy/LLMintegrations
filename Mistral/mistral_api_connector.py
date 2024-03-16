@@ -7,7 +7,6 @@ Create a .env file in the root directory of the project with the following conte
 run: python install -r requirements.txt
 """
 
-from typing import Union
 from mistralai.client import MistralClient
 from mistralai.models.chat_completion import ChatMessage
 from dotenv import load_dotenv
@@ -21,7 +20,7 @@ load_dotenv()
 class MistralApiConnector:
     """Mistral API Implementation"""
 
-    def __init__(self, model: str) -> str:
+    def __init__(self, model: str):
         self.client = MistralClient(api_key=os.environ.get("MISTRAL_API_KEY"))
         self.model = model
 
