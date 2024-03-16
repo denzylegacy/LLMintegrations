@@ -6,6 +6,7 @@ Get an OpenAI API Key: https://platform.openai.com/api-keys
 Create a .env file in the root directory of the project with the following content: OPENAI_API_KEY="YOUR_API_KEY"
 run: python -m  pip install -r requirements.txt
 """
+
 from typing import Union
 from openai import OpenAI
 import tiktoken
